@@ -1,0 +1,37 @@
+{
+  "expression": "sin(add(sin(sin(sin(sin(bmi)))), sin(s5)))",
+  "train_mae": 47.973747376173804,
+  "test_mae": 40.21335400058988,
+  "population_size": 5000,
+  "generations": 80,
+  "function_set": [
+    "add",
+    "sub",
+    "mul",
+    "div",
+    "sqrt",
+    "log",
+    "abs",
+    "neg",
+    "sin",
+    "cos"
+  ],
+  "features_used": [
+    "bmi",
+    "s5",
+    "bp",
+    "s6",
+    "age",
+    "s2",
+    "s1",
+    "s3"
+  ],
+  "total_features": 10,
+  "feature_selection": {
+    "method": "rf_importance_threshold",
+    "importance_threshold": 0.04,
+    "min_features": 3
+  },
+  "metric": "mean absolute error",
+  "seed": 42
+}

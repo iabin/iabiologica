@@ -1,0 +1,34 @@
+{
+  "expression": "add(MedInc, div(add(add(add(MedInc, sin(sub(sqrt(Latitude), mul(Longitude, -6.203)))), add(Latitude, Longitude)), add(sin(log(AveOccup)), add(add(add(add(add(add(add(MedInc, add(Longitude, Latitude)), mul(neg(neg(-4.778)), neg(sin(AveOccup)))), add(Latitude, Longitude)), mul(neg(neg(-4.778)), neg(sin(AveOccup)))), mul(neg(neg(-4.778)), neg(sin(AveOccup)))), add(Latitude, Longitude)), cos(MedInc)))), -5.350))",
+  "train_mae": 0.46931387089368215,
+  "test_mae": 0.47510953425601854,
+  "population_size": 5000,
+  "generations": 80,
+  "function_set": [
+    "add",
+    "sub",
+    "mul",
+    "div",
+    "sqrt",
+    "log",
+    "abs",
+    "neg",
+    "sin",
+    "cos"
+  ],
+  "features_used": [
+    "MedInc",
+    "AveOccup",
+    "Latitude",
+    "Longitude",
+    "HouseAge"
+  ],
+  "total_features": 8,
+  "feature_selection": {
+    "method": "rf_importance_threshold",
+    "importance_threshold": 0.04,
+    "min_features": 3
+  },
+  "metric": "mean absolute error",
+  "seed": 42
+}
